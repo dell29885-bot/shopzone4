@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+          <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/women.css">
+    <link rel="stylesheet" href="/Style.css/shop.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+
+
+
+
+
+
+<!-- ================= WOMEN HERO ================= -->
+
+<section class="women-hero">
+
+    <div class="women-hero-content">
+
+        <span>NEW WOMEN'S COLLECTION</span>
+
+        <h1>
+            Elegance Meets
+            <strong>Style</strong>
+        </h1>
+
+        <p>
+            Discover beautiful fashion, trendy outfits
+            and everyday essentials made for you.
+        </p>
+
+        <a href="#womenProducts">
+            Shop Now
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WOMEN PRODUCTS ================= -->
+
+<section class="women-products" id="womenProducts">
+
+    <div class="section-heading">
+
+        <span>WOMEN'S COLLECTION</span>
+
+        <h2>
+            Shop Women's <strong>Fashion</strong>
+        </h2>
+
+        <p>
+            Explore our latest collection of stylish women's products.
+        </p>
+
+    </div>
+
+
+    <!-- ================= FILTER ================= -->
+
+    <div class="category-filter">
+
+    
+
+         <button class="filter-btn active" data-category="all">
+            All
+        </button>
+
+          <button class="filter-btn active" data-category="dress">
+            Dresses
+        </button>
+          <button class="filter-btn active" data-category="top">
+              Tops
+        </button>
+
+         <button class="filter-btn active" data-category="jeans">
+             Jeans
+        </button>
+         <button class="filter-btn active" data-category="handbag">
+              Handbags
+        </button>
+         <button class="filter-btn active" data-category="shoes">
+           Shoes
+        </button>
+
+
+    </div>
+
+
+    <!-- ================= PRODUCT GRID ================= -->
+
+    <div class="products-grid" id="womenProductGrid">
+
+
+        <!-- PRODUCT 1  dress-->
+
+        <div class="product-card"
+            data-category="dress">
+
+            <div class="product-image">
+
+                <span class="discount">-30%</span>
+<button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-person-dress"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women Dress
+                </span>
+
+                <h3>
+                    Elegant Floral Dress
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(142)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹999</strong>
+                    <del>₹1,399</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Elegant Floral Dress',
+                        999,
+                        'person-dress'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2  top -->
+
+        <div class="product-card"
+            data-category="top">
+
+            <div class="product-image">
+
+                <span class="discount">-25%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women Top
+                </span>
+
+                <h3>
+                    Stylish Casual Top
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(96)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹699</strong>
+                    <del>₹899</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Stylish Casual Top',
+                        699,
+                        'shirt'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3  jeans-->
+
+        <div class="product-card"
+            data-category="jeans">
+
+            <div class="product-image">
+
+                <span class="discount">-20%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-jeans"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women Jeans
+                </span>
+
+                <h3>
+                    High Waist Blue Jeans
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(118)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,099</strong>
+                    <del>₹1,399</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'High Waist Blue Jeans',
+                        1099,
+                        'jeans'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 handbag -->
+
+        <div class="product-card"
+            data-category="handbag">
+
+            <div class="product-image">
+
+                <span class="discount">-35%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women's Handbag
+                </span>
+
+                <h3>
+                    Premium Ladies Handbag
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(89)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,299</strong>
+                    <del>₹1,999</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Premium Ladies Handbag',
+                        1299,
+                        'bag-shopping'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5  shoes-->
+
+        <div class="product-card"
+            data-category="shoes">
+
+            <div class="product-image">
+
+                <span class="discount">-28%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-shoe-prints"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women's Shoes
+                </span>
+
+                <h3>
+                    Stylish Women's Sneakers
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(164)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,199</strong>
+                    <del>₹1,699</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Stylish Womens Sneakers',
+                        1199,
+                        'shoe-prints'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6   dress-->
+
+        <div class="product-card"
+            data-category="dress">
+
+            <div class="product-image">
+
+                <span class="discount">-22%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-person-dress"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women Dress
+                </span>
+
+                <h3>
+                    Party Wear Midi Dress
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(73)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,499</strong>
+                    <del>₹1,899</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Party Wear Midi Dress',
+                        1499,
+                        'person-dress'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7  top-->
+
+        <div class="product-card"
+            data-category="top">
+
+            <div class="product-image">
+
+                <span class="discount">-18%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women Top
+                </span>
+
+                <h3>
+                    Premium Sleeveless Top
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(61)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹799</strong>
+                    <del>₹999</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Premium Sleeveless Top',
+                        799,
+                        'shirt'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 handbag-->
+
+        <div class="product-card"
+            data-category="handbag">
+
+            <div class="product-image">
+
+                <span class="discount">-32%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women's Handbag
+                </span>
+
+                <h3>
+                    Classic Shoulder Bag
+                </h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(105)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹899</strong>
+                    <del>₹1,299</del>
+                </div>
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Classic Shoulder Bag',
+                        899,
+                        'bag-shopping'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script>
+
+function filterWomenProducts(category, button) {
+
+    const products =
+        document.querySelectorAll(
+            "#womenProductGrid .product-card"
+        );
+
+    const buttons =
+        document.querySelectorAll(
+            ".women-products .filter-btn"
+        );
+
+    buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+    });
+
+
+    button.classList.add("active");
+
+
+    products.forEach(function(product) {
+
+        const productCategory =
+            product.getAttribute("data-category");
+
+
+        if (
+            category === "all" ||
+            productCategory === category
+        ) {
+
+            product.style.display = "";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>
+
+</body>
+</html>

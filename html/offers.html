@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+  <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/offers.css">
+    <link rel="stylesheet" href="/Style.css/shop.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+
+
+
+
+<!-- ================= OFFER HERO ================= -->
+
+<section class="offer-hero">
+
+    <div class="offer-hero-content">
+
+        <span>LIMITED TIME OFFER</span>
+
+        <h1>
+
+            Big Sale
+            <strong>Live Now!</strong>
+
+        </h1>
+
+        <p>
+
+            Grab your favourite products at amazing
+            prices before the offer ends.
+
+        </p>
+
+
+        <div class="hero-discount">
+
+            <strong>UP TO</strong>
+
+            <b>50%</b>
+
+            <span>OFF</span>
+
+        </div>
+
+
+        <a href="#offerProducts">
+
+            Shop Deals
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section class="countdown-section">
+
+    <div class="countdown-heading">
+
+        <span>HURRY UP!</span>
+
+        <h2>
+
+            Offer Ends
+            <strong>Soon</strong>
+
+        </h2>
+
+        <p>
+            Don't miss these amazing deals.
+        </p>
+
+    </div>
+
+
+    <div class="countdown">
+
+        <div class="time-box">
+
+            <strong id="offerDays">00</strong>
+
+            <span>Days</span>
+
+        </div>
+
+
+        <div class="time-box">
+
+            <strong id="offerHours">00</strong>
+
+            <span>Hours</span>
+
+        </div>
+
+
+        <div class="time-box">
+
+            <strong id="offerMinutes">00</strong>
+
+            <span>Minutes</span>
+
+        </div>
+
+
+        <div class="time-box">
+
+            <strong id="offerSeconds">00</strong>
+
+            <span>Seconds</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFER CATEGORIES ================= -->
+
+<section class="offer-categories">
+
+    <div class="offer-heading">
+
+        <span>SHOP BY DEAL</span>
+
+        <h2>
+
+            Choose Your
+            <strong>Favourite Deal</strong>
+
+        </h2>
+
+    </div>
+
+
+    <div class="deal-grid">
+
+
+        <a href="#offerProducts" class="deal-card">
+
+            <div class="deal-icon">
+
+                <i class="fa-solid fa-shirt"></i>
+
+            </div>
+
+            <h3>Fashion Sale</h3>
+
+            <p>Up to 50% OFF</p>
+
+            <span>Shop Now →</span>
+
+        </a>
+
+
+        <a href="Electronics.html" class="deal-card">
+
+            <div class="deal-icon">
+
+                <i class="fa-solid fa-laptop"></i>
+
+            </div>
+
+            <h3>Electronics</h3>
+
+            <p>Up to 40% OFF</p>
+
+            <span>Shop Now →</span>
+
+        </a>
+
+
+        <a href="Jewellery.html" class="deal-card">
+
+            <div class="deal-icon">
+
+                <i class="fa-solid fa-gem"></i>
+
+            </div>
+
+            <h3>Jewellery</h3>
+
+            <p>Up to 45% OFF</p>
+
+            <span>Shop Now →</span>
+
+        </a>
+
+
+        <a href="Electronics.html" class="deal-card">
+
+            <div class="deal-icon">
+
+                <i class="fa-solid fa-bag-shopping"></i>
+
+            </div>
+
+            <h3>Accessories</h3>
+
+            <p>Up to 35% OFF</p>
+
+            <span>Shop Now →</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= OFFER PRODUCTS ================= -->
+
+<section class="offer-products"
+         id="offerProducts">
+
+
+    <div class="section-heading">
+
+        <span>HOT DEALS</span>
+
+        <h2>
+
+            Today's
+            <strong>Best Offers</strong>
+
+        </h2>
+
+        <p>
+            Limited stock available. Grab your deal today!
+        </p>
+
+    </div>
+
+
+
+    <div class="products-grid"
+         id="offerProductGrid">
+
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <span class="discount">-50%</span>
+
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-shirt"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Men's Fashion
+                </span>
+
+
+                <h3>
+                    Premium Casual T-Shirt
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(245)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹499</strong>
+
+                    <del>₹999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Premium Casual T-Shirt',
+                        499,
+                        'shirt'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <span class="discount">-40%</span>
+
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-person-dress"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Women's Fashion
+                </span>
+
+
+                <h3>
+                    Elegant Party Dress
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(187)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹899</strong>
+
+                    <del>₹1,499</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Elegant Party Dress',
+                        899,
+                        'person-dress'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <span class="discount">-35%</span>
+
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-headphones"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Electronics
+                </span>
+
+
+                <h3>
+                    Wireless Headphones
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(321)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,299</strong>
+
+                    <del>₹1,999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Wireless Headphones',
+                        1299,
+                        'headphones'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <span class="discount">-45%</span>
+
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Jewellery
+                </span>
+
+
+                <h3>
+                    Designer Jewellery Set
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(156)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,099</strong>
+
+                    <del>₹1,999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Designer Jewellery Set',
+                        1099,
+                        'gem'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <span class="discount">-30%</span>
+
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Electronics
+                </span>
+
+
+                <h3>
+                    Smart 5G Smartphone
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(289)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹13,999</strong>
+
+                    <del>₹19,999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Smart 5G Smartphone',
+                        13999,
+                        'mobile-screen-button'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+
+                <span class="discount">-38%</span>
+
+
+                <button
+                    class="wishlist"
+                    onclick="toggleWishlist(this)">
+
+                    <i class="fa-regular fa-heart"></i>
+
+                </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Accessories
+                </span>
+
+
+                <h3>
+                    Premium Ladies Handbag
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(198)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹799</strong>
+
+                    <del>₹1,299</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Premium Ladies Handbag',
+                        799,
+                        'bag-shopping'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COUPON SECTION ================= -->
+
+<section class="coupon-section">
+
+    <div class="coupon-content">
+
+        <span>EXTRA SAVINGS</span>
+
+        <h2>
+            Get Extra <strong>₹200 OFF</strong>
+        </h2>
+
+        <p>
+            Use coupon code at checkout and save more.
+        </p>
+
+
+        <div class="coupon-code">
+
+            <span>SHOP200</span>
+
+            <button onclick="copyCoupon()">
+
+                <i class="fa-regular fa-copy"></i>
+
+                Copy Code
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Offer end date
+    const offerEndDate = new Date(2026, 9, 1, 23, 59, 59).getTime();
+    // 8 = September (JavaScript months 0 se start hote hain)
+
+    function updateOfferCountdown() {
+
+        const now = new Date().getTime();
+        const distance = offerEndDate - now;
+
+        // Agar offer expire ho gaya
+        if (distance <= 0) {
+            document.getElementById("offerDays").innerText = "00";
+            document.getElementById("offerHours").innerText = "00";
+            document.getElementById("offerMinutes").innerText = "00";
+            document.getElementById("offerSeconds").innerText = "00";
+            return;
+        }
+
+        // Calculate time
+        const days = Math.floor(
+            distance / (1000 * 60 * 60 * 24)
+        );
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60)) /
+            1000
+        );
+
+        // Display
+        document.getElementById("offerDays").innerText =
+            String(days).padStart(2, "0");
+
+        document.getElementById("offerHours").innerText =
+            String(hours).padStart(2, "0");
+
+        document.getElementById("offerMinutes").innerText =
+            String(minutes).padStart(2, "0");
+
+        document.getElementById("offerSeconds").innerText =
+            String(seconds).padStart(2, "0");
+    }
+
+    // Immediately run
+    updateOfferCountdown();
+
+    // Update every second
+    setInterval(updateOfferCountdown, 1000);
+
+});
+</script>
+
+
+
+
+
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>>
+
+</body>
+</html>

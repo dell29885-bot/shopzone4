@@ -1,0 +1,414 @@
+
+/* =========================================
+   ELECTRONICS HERO
+========================================= */
+
+.electronics-hero {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.92),
+            rgba(15, 23, 42, 0.45)
+        ),
+        url("https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.electronics-hero-content {
+
+    max-width: 650px;
+
+    color: white;
+
+}
+
+
+.electronics-hero-content > span {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.electronics-hero-content h1 {
+
+    margin: 0;
+
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+}
+
+
+.electronics-hero-content h1 strong {
+
+    display: block;
+
+    color: #38bdf8;
+
+}
+
+
+.electronics-hero-content p {
+
+    margin: 22px 0 30px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #e2e8f0;
+
+}
+
+
+.electronics-hero-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: #0ea5e9;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.electronics-hero-content a:hover {
+
+    background: #0284c7;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================
+   ELECTRONICS PRODUCTS
+========================================= */
+
+.electronics-products {
+
+    padding: 80px 7%;
+
+    background: #f8fafc;
+
+}
+
+
+.electronics-products .section-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.electronics-products .section-heading > span {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #0ea5e9;
+
+}
+
+
+.electronics-products .section-heading h2 {
+
+    margin: 10px 0;
+
+    font-size: 38px;
+
+    color: #0f172a;
+
+}
+
+
+.electronics-products .section-heading h2 strong {
+
+    color: #0ea5e9;
+
+}
+
+
+.electronics-products .section-heading p {
+
+    color: #64748b;
+
+}
+
+
+
+/* =========================================
+   CATEGORY FILTER
+========================================= */
+
+.electronics-products .category-filter {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.electronics-products .filter-btn {
+
+    padding: 10px 20px;
+
+    border: 1px solid #cbd5e1;
+
+    background: white;
+
+    color: #334155;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.electronics-products .filter-btn:hover {
+
+    border-color: #0ea5e9;
+
+    color: #0ea5e9;
+
+}
+
+
+.electronics-products .filter-btn.active {
+
+    background: #0ea5e9;
+
+    border-color: #0ea5e9;
+
+    color: white;
+
+}
+
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.electronics-products .product-card {
+
+    transition: 0.3s;
+
+}
+
+
+.electronics-products .product-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+.electronics-products .product-placeholder {
+
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f8fafc
+    );
+
+}
+
+
+.electronics-products .product-placeholder i {
+
+    font-size: 75px;
+
+    color: #0ea5e9;
+
+    transition: 0.3s;
+
+}
+
+
+.electronics-products .product-card:hover
+.product-placeholder i {
+
+    transform: scale(1.1);
+
+}
+
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+.electronics-products .wishlist {
+
+    z-index: 5;
+
+}
+
+
+.electronics-products .wishlist:hover {
+
+    color: #ef4444;
+
+}
+
+
+.electronics-products .wishlist i.fa-solid {
+
+    color: #ef4444;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .electronics-hero {
+
+        min-height: 430px;
+
+        padding: 60px 6%;
+
+    }
+
+
+    .electronics-hero-content h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .electronics-products {
+
+        padding: 60px 5%;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .electronics-hero {
+
+        min-height: 400px;
+
+        padding: 50px 5%;
+
+        background-position: center;
+
+    }
+
+
+    .electronics-hero-content h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .electronics-hero-content p {
+
+        font-size: 15px;
+
+    }
+
+
+    .electronics-products {
+
+        padding: 50px 4%;
+
+    }
+
+
+    .electronics-products .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .electronics-products .filter-btn {
+
+        padding: 9px 15px;
+
+        font-size: 13px;
+
+    }
+
+}

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/men.css">
+    <link rel="stylesheet" href="/Style.css/shop.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+<!-- ================= MEN HERO ================= -->
+
+<section class="men-hero">
+
+    <div class="men-hero-content">
+
+        <span>NEW MEN'S COLLECTION</span>
+
+        <h1>
+            Style That
+            <strong>Defines You</strong>
+        </h1>
+
+        <p>
+            Discover the latest men's fashion,
+            premium styles and everyday essentials.
+        </p>
+
+        <a href="#menProducts">
+            Shop Now
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MEN PRODUCTS ================= -->
+
+<section class="men-products" id="menProducts">
+
+    <div class="section-heading">
+
+        <span>MEN'S COLLECTION</span>
+
+        <h2>
+            Shop Men's <strong>Fashion</strong>
+        </h2>
+
+        <p>
+            Upgrade your wardrobe with our latest men's collection.
+        </p>
+
+    </div>
+
+
+    <!-- CATEGORY FILTER -->
+
+    <div class="category-filter">
+
+
+         <button class="filter-btn active" data-category="all">
+            All
+        </button>
+
+          <button class="filter-btn active" data-category="tshirt">
+            T-Shirts
+        </button>
+          <button class="filter-btn active" data-category="shirt">
+            Shirts
+        </button>
+
+         <button class="filter-btn active" data-category="jeans">
+             Jeans
+        </button>
+         <button class="filter-btn active" data-category="jacket">
+               Jackets
+        </button>
+         <button class="filter-btn active" data-category="shoes">
+           Shoes
+        </button>
+
+
+
+    </div>
+
+
+    <!-- PRODUCT GRID -->
+
+    <div class="products-grid" id="menProductGrid">
+
+
+        <!-- PRODUCT 1 tshirt -->
+
+        <div class="product-card"
+             data-category="tshirt">
+
+            <div class="product-image">
+
+                <span class="discount">-25%</span>
+
+              <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men T-Shirt</span>
+
+                <h3>Classic Cotton T-Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(120)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹599</strong>
+                    <del>₹799</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Classic Cotton T-Shirt',
+                            599,
+                            'shirt'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2   shirt-->
+
+        <div class="product-card"
+             data-category="shirt">
+
+            <div class="product-image">
+
+                <span class="discount">-20%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men Shirt</span>
+
+                <h3>Premium Casual Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(98)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹899</strong>
+                    <del>₹1,199</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Premium Casual Shirt',
+                            899,
+                            'shirt'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 jeans-->
+
+        <div class="product-card"
+             data-category="jeans">
+
+            <div class="product-image">
+
+                <span class="discount">-30%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-jeans"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men Jeans</span>
+
+                <h3>Slim Fit Blue Jeans</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(156)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,099</strong>
+                    <del>₹1,599</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Slim Fit Blue Jeans',
+                            1099,
+                            'jeans'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 jacket-->
+
+        <div class="product-card"
+             data-category="jacket">
+
+            <div class="product-image">
+
+                <span class="discount">-35%</span>
+
+                 <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-vest"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men Jacket</span>
+
+                <h3>Premium Casual Jacket</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(87)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,499</strong>
+                    <del>₹2,299</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Premium Casual Jacket',
+                            1499,
+                            'vest'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 5  shoes -->
+
+        <div class="product-card"
+             data-category="shoes">
+
+            <div class="product-image">
+
+                <span class="discount">-25%</span>
+
+                  <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-shoe-prints"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men Shoes</span>
+
+                <h3>Classic Running Shoes</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(210)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,299</strong>
+                    <del>₹1,799</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Classic Running Shoes',
+                            1299,
+                            'shoe-prints'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 6  tshirt-->
+
+        <div class="product-card"
+             data-category="tshirt">
+
+            <div class="product-image">
+
+                <span class="discount">-15%</span>
+
+                  <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men T-Shirt</span>
+
+                <h3>Oversized Street T-Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(76)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹699</strong>
+                    <del>₹899</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Oversized Street T-Shirt',
+                            699,
+                            'shirt'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 7 shirt -->
+
+        <div class="product-card"
+             data-category="shirt">
+
+            <div class="product-image">
+
+                <span class="discount">-22%</span>
+
+                 <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-shirt"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men Shirt</span>
+
+                <h3>Formal Office Shirt</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(65)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹999</strong>
+                    <del>₹1,299</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Formal Office Shirt',
+                            999,
+                            'shirt'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 8 jeans-->
+
+        <div class="product-card"
+             data-category="jeans">
+
+            <div class="product-image">
+
+                <span class="discount">-28%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+                    <i class="fa-solid fa-jeans"></i>
+                </div>
+
+            </div>
+
+            <div class="product-info">
+
+                <span class="product-category">Men Jeans</span>
+
+                <h3>Regular Fit Black Jeans</h3>
+
+                <div class="rating">
+                    ★★★★★
+                    <span>(112)</span>
+                </div>
+
+                <div class="price">
+                    <strong>₹1,199</strong>
+                    <del>₹1,699</del>
+                </div>
+
+                <button class="add-cart"
+                        onclick="addProductToCart(
+                            'Regular Fit Black Jeans',
+                            1199,
+                            'jeans'
+                        )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+function filterMenProducts(category, button) {
+
+    const products =
+        document.querySelectorAll("#menProductGrid .product-card");
+
+    const buttons =
+        document.querySelectorAll(".category-filter .filter-btn");
+
+    buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    products.forEach(function(product) {
+
+        const productCategory =
+            product.getAttribute("data-category");
+
+        if (
+            category === "all" ||
+            productCategory === category
+        ) {
+            product.style.display = "";
+        } else {
+            product.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>
+
+</body>
+</html>

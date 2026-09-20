@@ -1,0 +1,354 @@
+
+/* =====================================================
+   SHOPZONE WOMEN PAGE
+===================================================== */
+
+
+/* ================= WOMEN HERO ================= */
+
+.women-hero {
+
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 7%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.92),
+            rgba(15, 23, 42, 0.60),
+            rgba(15, 23, 42, 0.15)
+        ),
+
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* ================= HERO CONTENT ================= */
+
+.women-hero-content {
+
+    max-width: 600px;
+
+    color: #ffffff;
+
+}
+
+
+.women-hero-content span {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    color: #f97316;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.women-hero-content h1 {
+
+    margin: 0 0 18px;
+
+    font-size: 55px;
+
+    line-height: 1.1;
+
+}
+
+
+.women-hero-content h1 strong {
+
+    color: #f97316;
+
+}
+
+
+.women-hero-content p {
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+    color: #e2e8f0;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+.women-hero-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: #f97316;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.women-hero-content a:hover {
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+}
+
+
+/* ================= PRODUCTS SECTION ================= */
+
+.women-products {
+
+    padding: 80px 7%;
+
+    background: #f8fafc;
+
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.women-products .section-heading {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.women-products .section-heading span {
+
+    color: #f97316;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.women-products .section-heading h2 {
+
+    margin: 10px 0;
+
+    color: #0f172a;
+
+    font-size: 38px;
+
+}
+
+
+.women-products .section-heading h2 strong {
+
+    color: #f97316;
+
+}
+
+
+.women-products .section-heading p {
+
+    color: #64748b;
+
+}
+
+
+/* ================= FILTER ================= */
+
+.women-products .category-filter {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.women-products .filter-btn {
+
+    padding: 10px 22px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+
+    color: #475569;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.women-products .filter-btn:hover,
+
+.women-products .filter-btn.active {
+
+    background: #f97316;
+
+    border-color: #f97316;
+
+    color: #ffffff;
+
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.women-products .product-card {
+
+    transition: 0.3s;
+
+}
+
+
+.women-products .product-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+/* ================= WISHLIST ================= */
+
+.women-products .wishlist {
+
+    z-index: 5;
+
+}
+
+
+.women-products .wishlist.active,
+
+.women-products .wishlist i.fa-solid {
+
+    color: #ef4444;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .women-hero {
+
+        min-height: 420px;
+
+        background-position: center;
+
+    }
+
+
+    .women-hero-content h1 {
+
+        font-size: 44px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .women-hero {
+
+        min-height: 430px;
+
+        padding: 50px 5%;
+
+    }
+
+
+    .women-hero-content h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .women-hero-content p {
+
+        font-size: 15px;
+
+    }
+
+
+    .women-products {
+
+        padding: 60px 5%;
+
+    }
+
+
+    .women-products .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .women-products .category-filter {
+
+        justify-content: flex-start;
+
+        overflow-x: auto;
+
+        flex-wrap: nowrap;
+
+        padding-bottom: 8px;
+
+    }
+
+
+    .women-products .filter-btn {
+
+        white-space: nowrap;
+
+    }
+
+}

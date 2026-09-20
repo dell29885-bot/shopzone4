@@ -1,0 +1,411 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+
+/* ================= HEADER ================= */
+
+.account-header {
+    height: 75px;
+    padding: 0 7%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.account-logo a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.account-logo span {
+    color: #ef4444;
+}
+
+.back-shop {
+    text-decoration: none;
+    color: #475569;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-shop i {
+    margin-right: 6px;
+}
+
+.back-shop:hover {
+    color: #ef4444;
+}
+
+
+/* ================= ACCOUNT SECTION ================= */
+
+.account-section {
+    min-height: calc(100vh - 125px);
+    padding: 60px 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-container {
+    width: 100%;
+    max-width: 1100px;
+    min-height: 650px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 15px 50px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ================= LEFT BANNER ================= */
+
+.account-banner {
+    position: relative;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(239, 68, 68, 0.92),
+            rgba(190, 24, 93, 0.92)
+        ),
+        url("https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+}
+
+.banner-content {
+    max-width: 450px;
+}
+
+.small-title {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.banner-content h1 {
+    margin: 18px 0;
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.banner-content h1 strong {
+    color: #fde047;
+}
+
+.banner-content p {
+    line-height: 1.8;
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+
+/* FEATURES */
+
+.account-features {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.account-features div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.account-features i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-features span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* ================= ACCOUNT BOX ================= */
+
+.account-box {
+    padding: 55px 60px;
+    display: flex;
+    align-items: center;
+}
+
+#loginForm,
+#registerForm {
+    width: 100%;
+}
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading > span {
+    color: #ef4444;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.form-heading h2 {
+    margin-top: 8px;
+    font-size: 32px;
+    color: #111827;
+}
+
+.form-heading h2 strong {
+    color: #ef4444;
+}
+
+.form-heading p {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+
+/* ================= INPUT ================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.input-box {
+    height: 50px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+.input-box:focus-within {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.input-box > i {
+    color: #94a3b8;
+    margin-right: 12px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.password-toggle {
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+
+/* ================= OPTIONS ================= */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 25px;
+    font-size: 13px;
+}
+
+.remember {
+    color: #64748b;
+    cursor: pointer;
+}
+
+.remember input {
+    margin-right: 5px;
+}
+
+.form-options a {
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ================= BUTTON ================= */
+
+.account-btn {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 10px;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.account-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.25);
+}
+
+
+/* ================= SWITCH ================= */
+
+.switch-form {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.switch-form button {
+    border: none;
+    background: none;
+    color: #ef4444;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+/* ================= TERMS ================= */
+
+.terms {
+    display: block;
+    margin: 5px 0 20px;
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.terms input {
+    margin-right: 5px;
+}
+
+.terms a {
+    color: #ef4444;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* ================= FOOTER ================= */
+
+.account-footer {
+    height: 50px;
+    background: #111827;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .account-section {
+        padding: 40px 4%;
+    }
+
+    .account-container {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .account-banner {
+        padding: 45px;
+        min-height: 400px;
+    }
+
+    .banner-content h1 {
+        font-size: 40px;
+    }
+
+    .account-box {
+        padding: 45px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .account-header {
+        padding: 0 5%;
+    }
+
+    .account-logo a {
+        font-size: 23px;
+    }
+
+    .back-shop {
+        font-size: 13px;
+    }
+
+    .account-section {
+        padding: 25px 4%;
+    }
+
+    .account-banner {
+        padding: 35px 25px;
+    }
+
+    .banner-content h1 {
+        font-size: 34px;
+    }
+
+    .account-box {
+        padding: 35px 25px;
+    }
+
+    .form-heading h2 {
+        font-size: 27px;
+    }
+
+}

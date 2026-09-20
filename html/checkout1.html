@@ -1,0 +1,1468 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - ShopZone</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../Style.css/home.css">
+    <link rel="stylesheet" href="../Style.css/shop.css">
+
+    <!-- Checkout CSS -->
+    <link rel="stylesheet" href="/Style.css/checkout1.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- TOP BAR -->
+
+    <div class="top-bar">
+
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+
+        <p>Call Us: +91 98765 43210</p>
+
+    </div>
+
+
+    <!-- MAIN HEADER -->
+
+    <div class="main-header">
+
+
+        <!-- LOGO -->
+
+        <a href="../index.html" class="logo">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span>
+                Shop<span>Zone</span>
+            </span>
+
+        </a>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- HEADER ICONS -->
+
+        <div class="header-icons">
+
+
+            <a href="../account/account.html">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Account</span>
+
+            </a>
+
+
+            <a href="../wishlist/wishlist.html">
+
+                <i class="fa-regular fa-heart"></i>
+
+                <span>Wishlist</span>
+
+            </a>
+
+
+            <a href="../cart/cart.html"
+               class="cart">
+
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <span>Cart</span>
+
+                <b id="cartCount">0</b>
+
+            </a>
+
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav
+        class="navbar"
+        id="navbar">
+
+        <ul>
+
+            <li>
+                <a href="../index/index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="../shop/shop.html">
+                    Shop
+                </a>
+            </li>
+
+            <li>
+                <a href="../men/men.html">
+                    Men
+                </a>
+            </li>
+
+            <li>
+                <a href="../women/women.html">
+                    Women
+                </a>
+            </li>
+
+            <li>
+                <a href="../electronics/electronics.html">
+                    Electronics
+                </a>
+            </li>
+
+            <li>
+                <a href="../jewellery/jewellery.html">
+                    Jewellery
+                </a>
+            </li>
+
+            <li>
+                <a href="../offers/offers.html">
+                    Offers
+                </a>
+            </li>
+
+            <li>
+                <a href="../contact/contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<main class="checkout-page">
+
+
+    <!-- PAGE HEADING -->
+
+    <div class="checkout-heading">
+
+        <span>SECURE CHECKOUT</span>
+
+        <h1>
+            Complete Your <strong>Order</strong>
+        </h1>
+
+        <p>
+            Enter your details and choose your preferred payment method.
+        </p>
+
+    </div>
+
+
+
+    <div class="checkout-layout">
+
+
+        <!-- ======================================
+             LEFT SIDE
+        ======================================= -->
+
+        <div class="checkout-left">
+
+
+            <!-- ================= CUSTOMER ================= -->
+
+            <section class="checkout-card">
+
+                <div class="card-title">
+
+                    <div class="step-number">
+                        1
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Customer Information
+                        </h2>
+
+                        <p>
+                            Enter your contact details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your full name">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Mobile Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            maxlength="10"
+                            placeholder="10 digit mobile number">
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            placeholder="Enter your email">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= ADDRESS ================= -->
+
+            <section class="checkout-card">
+
+
+                <div class="card-title">
+
+                    <div class="step-number">
+                        2
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Delivery Address
+                        </h2>
+
+                        <p>
+                            Where should we deliver your order?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Complete Address *
+                        </label>
+
+                        <textarea
+                            id="customerAddress"
+                            rows="4"
+                            placeholder="House No., Street, Area, Landmark"></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            City *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerCity"
+                            placeholder="Enter city">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            State *
+                        </label>
+
+                        <select id="customerState">
+
+                            <option value="">
+                                Select State
+                            </option>
+
+                            <option>Delhi</option>
+                            <option>Haryana</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Rajasthan</option>
+                            <option>Maharashtra</option>
+                            <option>Punjab</option>
+                            <option>Gujarat</option>
+                            <option>Madhya Pradesh</option>
+                            <option>Bihar</option>
+                            <option>West Bengal</option>
+                            <option>Tamil Nadu</option>
+                            <option>Karnataka</option>
+                            <option>Telangana</option>
+                            <option>Kerala</option>
+                            <option>Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            PIN Code *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerPin"
+                            maxlength="6"
+                            placeholder="6 digit PIN">
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================= PAYMENT ================= -->
+
+            <section class="checkout-card">
+
+
+                <div class="card-title">
+
+                    <div class="step-number">
+                        3
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Payment Method
+                        </h2>
+
+                        <p>
+                            Choose how you want to pay
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-methods">
+
+
+                    <!-- COD -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="Cash on Delivery"
+                            checked>
+
+                        <div class="payment-icon">
+
+                            <i class="fa-solid fa-money-bill-wave"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Cash on Delivery
+                            </strong>
+
+                            <small>
+                                Pay when your order arrives
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- CARD -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="Credit/Debit Card">
+
+                        <div class="payment-icon">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Credit / Debit Card
+                            </strong>
+
+                            <small>
+                                Online card payment
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- UPI -->
+
+                    <label class="payment-option">
+
+                        <input
+                            type="radio"
+                            name="paymentMethod"
+                            value="UPI">
+
+                        <div class="payment-icon">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                UPI
+                            </strong>
+
+                            <small>
+                                Google Pay, PhonePe, Paytm etc.
+                            </small>
+
+                        </div>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- CARD DETAILS -->
+
+                <div
+                    id="cardDetails"
+                    class="payment-details"
+                    style="display:none;">
+
+                    <div class="form-grid">
+
+                        <div class="form-group full">
+
+                            <label>
+                                Card Number
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardNumber"
+                                maxlength="19"
+                                placeholder="XXXX XXXX XXXX XXXX">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Name on Card
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardName"
+                                placeholder="Name on card">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Expiry
+                            </label>
+
+                            <input
+                                type="text"
+                                id="cardExpiry"
+                                maxlength="5"
+                                placeholder="MM/YY">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- UPI DETAILS -->
+
+                <div
+                    id="upiDetails"
+                    class="payment-details"
+                    style="display:none;">
+
+                    <div class="form-group">
+
+                        <label>
+                            UPI ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="upiId"
+                            placeholder="example@upi">
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- ======================================
+             RIGHT SIDE
+        ======================================= -->
+
+        <aside class="checkout-right">
+
+
+            <!-- ================= ORDER SUMMARY ================= -->
+
+            <div class="order-summary">
+
+
+                <h2>
+                    Order Summary
+                </h2>
+
+
+                <!-- PRODUCTS -->
+
+                <div id="checkoutItems"
+                     class="checkout-items">
+
+                    <!-- Products added by JavaScript -->
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Items
+                    </span>
+
+                    <strong id="checkoutItemCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <strong id="checkoutSubtotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-row">
+
+                    <span>
+                        Shipping
+                    </span>
+
+                    <strong id="checkoutShipping">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-line"></div>
+
+
+                <div class="summary-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="checkoutTotal">
+                        ₹0
+                    </strong>
+
+                </div>
+
+
+
+                <!-- WHATSAPP BUTTON -->
+
+                <button
+                    type="button"
+                    class="whatsapp-order-btn"
+                    onclick="sendOrderToWhatsApp()">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Send Order on WhatsApp
+
+                </button>
+
+
+                <a
+                    href="../cart/cart.html"
+                    class="back-cart">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Cart
+
+                </a>
+
+
+                <div class="secure-box">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <strong>
+                            Secure Checkout
+                        </strong>
+
+                        <small>
+                            Your information is kept private.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </aside>
+
+    </div>
+
+</main>
+
+<script>
+
+
+/* =========================================================
+   SHOPZONE CHECKOUT
+========================================================= */
+
+
+/* WhatsApp Number
+   Country Code + Number
+   Example: India = 91
+*/
+
+const SHOPZONE_WHATSAPP = "7346743222";
+
+
+/* =========================================================
+   GET CART
+========================================================= */
+
+function getCheckoutCart() {
+
+    try {
+
+        return JSON.parse(
+            localStorage.getItem("shopzoneCart")
+        ) || [];
+
+    }
+
+    catch (error) {
+
+        console.error(
+            "Cart data error:",
+            error
+        );
+
+        return [];
+
+    }
+
+}
+
+
+/* =========================================================
+   LOAD CHECKOUT
+========================================================= */
+
+function loadCheckout() {
+
+    const cart = getCheckoutCart();
+
+    const itemsContainer =
+        document.getElementById("checkoutItems");
+
+    const itemCount =
+        document.getElementById("checkoutItemCount");
+
+    const subtotalElement =
+        document.getElementById("checkoutSubtotal");
+
+    const shippingElement =
+        document.getElementById("checkoutShipping");
+
+    const totalElement =
+        document.getElementById("checkoutTotal");
+
+
+    if (!itemsContainer) return;
+
+
+    /* Empty cart */
+
+    if (cart.length === 0) {
+
+        itemsContainer.innerHTML = `
+            <div style="
+                text-align:center;
+                padding:25px;
+                color:var(--text-secondary);
+            ">
+                <i class="fa-solid fa-cart-shopping"
+                   style="font-size:35px;"></i>
+
+                <p>Your cart is empty.</p>
+
+                <a href="../shop/shop.html"
+                   style="color:var(--primary-color);">
+                    Continue Shopping
+                </a>
+            </div>
+        `;
+
+        itemCount.textContent = "0";
+        subtotalElement.textContent = "₹0";
+        shippingElement.textContent = "₹0";
+        totalElement.textContent = "₹0";
+
+        return;
+
+    }
+
+
+    let subtotal = 0;
+
+    let totalItems = 0;
+
+
+    /* Clear old items */
+
+    itemsContainer.innerHTML = "";
+
+
+    /* Create products */
+
+    cart.forEach(function(item) {
+
+
+        const price =
+            Number(item.price) || 0;
+
+
+        const quantity =
+            Number(item.quantity) || 1;
+
+
+        const itemTotal =
+            price * quantity;
+
+
+        subtotal += itemTotal;
+
+        totalItems += quantity;
+
+
+        const image =
+            item.image || "";
+
+
+        const itemHTML = `
+
+            <div class="checkout-item">
+
+                ${
+                    image
+                    ?
+                    `
+                    <img
+                        src="${image}"
+                        class="checkout-item-image"
+                        alt="${item.name || "Product"}"
+                        onerror="this.style.display='none';">
+                    `
+                    :
+                    `
+                    <div
+                        class="checkout-item-image"
+                        style="
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                            background:var(--bg-secondary);
+                            color:var(--primary-color);
+                        ">
+
+                        <i class="fa-solid fa-box"></i>
+
+                    </div>
+                    `
+                }
+
+
+                <div class="checkout-item-info">
+
+                    <h4>
+                        ${item.name || "Product"}
+                    </h4>
+
+                    <p>
+                        Qty: ${quantity}
+                    </p>
+
+                </div>
+
+
+                <div class="checkout-item-price">
+
+                    ₹${itemTotal.toLocaleString("en-IN")}
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        itemsContainer.insertAdjacentHTML(
+            "beforeend",
+            itemHTML
+        );
+
+    });
+
+
+    /* Shipping */
+
+    const shipping =
+        subtotal >= 999
+        ? 0
+        : 50;
+
+
+    const total =
+        subtotal + shipping;
+
+
+    /* Update summary */
+
+    itemCount.textContent =
+        totalItems;
+
+
+    subtotalElement.textContent =
+        "₹" + subtotal.toLocaleString("en-IN");
+
+
+    shippingElement.textContent =
+        shipping === 0
+        ? "FREE"
+        : "₹" + shipping.toLocaleString("en-IN");
+
+
+    totalElement.textContent =
+        "₹" + total.toLocaleString("en-IN");
+
+}
+
+
+/* =========================================================
+   PAYMENT METHOD
+========================================================= */
+
+function setupPaymentMethods() {
+
+    const paymentInputs =
+        document.querySelectorAll(
+            'input[name="paymentMethod"]'
+        );
+
+
+    paymentInputs.forEach(function(input) {
+
+        input.addEventListener(
+            "change",
+            function() {
+
+                const cardDetails =
+                    document.getElementById(
+                        "cardDetails"
+                    );
+
+                const upiDetails =
+                    document.getElementById(
+                        "upiDetails"
+                    );
+
+
+                if (!cardDetails || !upiDetails)
+                    return;
+
+
+                cardDetails.style.display =
+                    "none";
+
+                upiDetails.style.display =
+                    "none";
+
+
+                if (
+                    input.value ===
+                    "Credit/Debit Card"
+                ) {
+
+                    cardDetails.style.display =
+                        "block";
+
+                }
+
+
+                if (
+                    input.value === "UPI"
+                ) {
+
+                    upiDetails.style.display =
+                        "block";
+
+                }
+
+            }
+        );
+
+    });
+
+}
+
+
+/* =========================================================
+   VALIDATE CUSTOMER DETAILS
+========================================================= */
+
+function validateCustomerDetails() {
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "customerPhone"
+        ).value.trim();
+
+
+    const address =
+        document.getElementById(
+            "customerAddress"
+        ).value.trim();
+
+
+    const city =
+        document.getElementById(
+            "customerCity"
+        ).value.trim();
+
+
+    const state =
+        document.getElementById(
+            "customerState"
+        ).value;
+
+
+    const pin =
+        document.getElementById(
+            "customerPin"
+        ).value.trim();
+
+
+    if (!name) {
+
+        alert("Please enter your full name.");
+
+        return false;
+
+    }
+
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+
+        alert(
+            "Please enter a valid 10 digit mobile number."
+        );
+
+        return false;
+
+    }
+
+
+    if (!address) {
+
+        alert(
+            "Please enter your complete delivery address."
+        );
+
+        return false;
+
+    }
+
+
+    if (!city) {
+
+        alert("Please enter your city.");
+
+        return false;
+
+    }
+
+
+    if (!state) {
+
+        alert("Please select your state.");
+
+        return false;
+
+    }
+
+
+    if (!/^[0-9]{6}$/.test(pin)) {
+
+        alert(
+            "Please enter a valid 6 digit PIN code."
+        );
+
+        return false;
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =========================================================
+   SEND ORDER TO WHATSAPP
+========================================================= */
+
+function sendOrderToWhatsApp() {
+
+
+    /* Cart */
+
+    const cart =
+        getCheckoutCart();
+
+
+    if (cart.length === 0) {
+
+        alert(
+            "Your cart is empty. Please add products first."
+        );
+
+        return;
+
+    }
+
+
+    /* Validate */
+
+    if (
+        !validateCustomerDetails()
+    ) {
+
+        return;
+
+    }
+
+
+    /* Customer */
+
+    const name =
+        document.getElementById(
+            "customerName"
+        ).value.trim();
+
+
+    const phone =
+        document.getElementById(
+            "customerPhone"
+        ).value.trim();
+
+
+    const email =
+        document.getElementById(
+            "customerEmail"
+        ).value.trim();
+
+
+    /* Address */
+
+    const address =
+        document.getElementById(
+            "customerAddress"
+        ).value.trim();
+
+
+    const city =
+        document.getElementById(
+            "customerCity"
+        ).value.trim();
+
+
+    const state =
+        document.getElementById(
+            "customerState"
+        ).value;
+
+
+    const pin =
+        document.getElementById(
+            "customerPin"
+        ).value.trim();
+
+
+    /* Payment */
+
+    const paymentInput =
+        document.querySelector(
+            'input[name="paymentMethod"]:checked'
+        );
+
+
+    const paymentMethod =
+        paymentInput
+        ? paymentInput.value
+        : "Cash on Delivery";
+
+
+    /* Calculate */
+
+    let subtotal = 0;
+
+    let totalItems = 0;
+
+
+    let productMessage = "";
+
+
+    cart.forEach(function(item, index) {
+
+        const price =
+            Number(item.price) || 0;
+
+
+        const quantity =
+            Number(item.quantity) || 1;
+
+
+        const itemTotal =
+            price * quantity;
+
+
+        subtotal += itemTotal;
+
+        totalItems += quantity;
+
+
+        productMessage +=
+            `${index + 1}. ${item.name || "Product"}`
+            + ` | Qty: ${quantity}`
+            + ` | ₹${itemTotal.toLocaleString("en-IN")}`
+            + `\n`;
+
+    });
+
+
+    const shipping =
+        subtotal >= 999
+        ? 0
+        : 50;
+
+
+    const grandTotal =
+        subtotal + shipping;
+
+
+    /* Order ID */
+
+    const orderId =
+        "SZ" +
+        Date.now().toString().slice(-8);
+
+
+    /* WhatsApp Message */
+
+    let message =
+
+`🛍️ *NEW SHOPZONE ORDER*
+
+━━━━━━━━━━━━━━━━━━
+
+📦 *ORDER ID*
+${orderId}
+
+━━━━━━━━━━━━━━━━━━
+
+👤 *CUSTOMER INFORMATION*
+
+Name: ${name}
+Mobile: ${phone}
+Email: ${email || "Not provided"}
+
+━━━━━━━━━━━━━━━━━━
+
+📍 *DELIVERY ADDRESS*
+
+${address}
+${city}, ${state}
+PIN: ${pin}
+
+━━━━━━━━━━━━━━━━━━
+
+🛒 *ORDER DETAILS*
+
+${productMessage}
+Total Items: ${totalItems}
+
+━━━━━━━━━━━━━━━━━━
+
+💰 *PAYMENT*
+
+Method: ${paymentMethod}
+
+━━━━━━━━━━━━━━━━━━
+
+💵 *ORDER SUMMARY*
+
+Subtotal: ₹${subtotal.toLocaleString("en-IN")}
+Shipping: ${
+    shipping === 0
+    ? "FREE"
+    : "₹" + shipping.toLocaleString("en-IN")
+}
+
+*GRAND TOTAL: ₹${grandTotal.toLocaleString("en-IN")}*
+
+━━━━━━━━━━━━━━━━━━
+
+Thank you for shopping with *ShopZone* ❤️`;
+
+
+    /* Encode message */
+
+    const whatsappURL =
+        "https://wa.me/"
+        + SHOPZONE_WHATSAPP
+        + "?text="
+        + encodeURIComponent(message);
+
+
+    /* Open WhatsApp */
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+
+/* =========================================================
+   PHONE INPUT
+========================================================= */
+
+document.addEventListener(
+    "input",
+    function(event) {
+
+        if (
+            event.target.id ===
+            "customerPhone"
+        ) {
+
+            event.target.value =
+                event.target.value
+                    .replace(/\D/g, "")
+                    .slice(0, 10);
+
+        }
+
+
+        if (
+            event.target.id ===
+            "customerPin"
+        ) {
+
+            event.target.value =
+                event.target.value
+                    .replace(/\D/g, "")
+                    .slice(0, 6);
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   LOAD CHECKOUT PAGE
+========================================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        loadCheckout();
+
+        setupPaymentMethods();
+
+    }
+);
+
+</script>
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="../Js/script.js"></script>
+
+<script src="checkout.js"></script>
+
+
+</body>
+
+</html>
+

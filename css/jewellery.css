@@ -1,0 +1,415 @@
+
+/* =========================================
+   JEWELLERY HERO
+========================================= */
+
+.jewellery-hero {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(40, 25, 20, 0.90),
+            rgba(40, 25, 20, 0.40)
+        ),
+        url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.jewellery-hero-content {
+
+    max-width: 650px;
+
+    color: white;
+
+}
+
+
+.jewellery-hero-content > span {
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.jewellery-hero-content h1 {
+
+    margin: 0;
+
+    font-size: 58px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+}
+
+
+.jewellery-hero-content h1 strong {
+
+    display: block;
+
+    color: #f5c76b;
+
+}
+
+
+.jewellery-hero-content p {
+
+    margin: 22px 0 30px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #f8fafc;
+
+}
+
+
+.jewellery-hero-content a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    background: #d4a017;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.jewellery-hero-content a:hover {
+
+    background: #b8860b;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================================
+   JEWELLERY PRODUCTS
+========================================= */
+
+.jewellery-products {
+
+    padding: 80px 7%;
+
+    background: #fffaf5;
+
+}
+
+
+.jewellery-products .section-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.jewellery-products .section-heading > span {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #b8860b;
+
+}
+
+
+.jewellery-products .section-heading h2 {
+
+    margin: 10px 0;
+
+    font-size: 38px;
+
+    color: #292015;
+
+}
+
+
+.jewellery-products .section-heading h2 strong {
+
+    color: #c18b20;
+
+}
+
+
+.jewellery-products .section-heading p {
+
+    color: #786f63;
+
+}
+
+
+
+/* =========================================
+   CATEGORY FILTER
+========================================= */
+
+.jewellery-products .category-filter {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.jewellery-products .filter-btn {
+
+    padding: 10px 20px;
+
+    border: 1px solid #d8c9ad;
+
+    background: white;
+
+    color: #574b3b;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.jewellery-products .filter-btn:hover {
+
+    border-color: #c18b20;
+
+    color: #b8860b;
+
+}
+
+
+.jewellery-products .filter-btn.active {
+
+    background: #c18b20;
+
+    border-color: #c18b20;
+
+    color: white;
+
+}
+
+
+
+/* =========================================
+   PRODUCT CARD
+========================================= */
+
+.jewellery-products .product-card {
+
+    transition: 0.3s;
+
+}
+
+
+.jewellery-products .product-card:hover {
+
+    transform: translateY(-7px);
+
+}
+
+
+.jewellery-products .product-placeholder {
+
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff4d8,
+            #fffaf5
+        );
+
+}
+
+
+.jewellery-products .product-placeholder i {
+
+    font-size: 75px;
+
+    color: #c18b20;
+
+    transition: 0.3s;
+
+}
+
+
+.jewellery-products .product-card:hover
+.product-placeholder i {
+
+    transform: scale(1.12);
+
+}
+
+
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+.jewellery-products .wishlist {
+
+    z-index: 5;
+
+}
+
+
+.jewellery-products .wishlist:hover {
+
+    color: #ef4444;
+
+}
+
+
+.jewellery-products .wishlist i.fa-solid {
+
+    color: #ef4444;
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .jewellery-hero {
+
+        min-height: 430px;
+
+        padding: 60px 6%;
+
+    }
+
+
+    .jewellery-hero-content h1 {
+
+        font-size: 45px;
+
+    }
+
+
+    .jewellery-products {
+
+        padding: 60px 5%;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .jewellery-hero {
+
+        min-height: 400px;
+
+        padding: 50px 5%;
+
+        background-position: center;
+
+    }
+
+
+    .jewellery-hero-content h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .jewellery-hero-content p {
+
+        font-size: 15px;
+
+    }
+
+
+    .jewellery-products {
+
+        padding: 50px 4%;
+
+    }
+
+
+    .jewellery-products .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .jewellery-products .filter-btn {
+
+        padding: 9px 15px;
+
+        font-size: 13px;
+
+    }
+
+}

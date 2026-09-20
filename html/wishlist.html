@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+          <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/wishlist.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+   
+
+<main class=
+"wishlist-page">
+
+
+    <div class="wishlist-heading">
+
+        <span>MY WISHLIST</span>
+
+        <h1>
+            Your <strong>Wishlist</strong>
+        </h1>
+
+        <p>
+            Save your favourite products and shop them later.
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= WISHLIST PRODUCTS ================= -->
+
+    <div id="wishlistItems"
+         class="wishlist-grid">
+
+    </div>
+
+
+
+    <!-- ================= EMPTY WISHLIST ================= -->
+
+    <div id="emptyWishlist"
+         class="empty-wishlist">
+
+        <i class="fa-regular fa-heart"></i>
+
+        <h2>
+            Your Wishlist is Empty
+        </h2>
+
+        <p>
+            You haven't added any products to your wishlist yet.
+        </p>
+
+        <a href="shop.html">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Continue Shopping
+        </a>
+
+    </div>
+
+
+</main>
+
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>
+
+</body>
+</html>

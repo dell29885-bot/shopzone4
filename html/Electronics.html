@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+       <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/Electronic.css">
+    <link rel="stylesheet" href="/Style.css/shop.css">>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= ELECTRONICS HERO ================= -->
+
+<section class="electronics-hero">
+
+    <div class="electronics-hero-content">
+
+        <span>SMART TECH COLLECTION</span>
+
+        <h1>
+
+            Upgrade Your
+            <strong>Digital Life</strong>
+
+        </h1>
+
+        <p>
+
+            Discover the latest gadgets, electronics
+            and smart devices at amazing prices.
+
+        </p>
+
+        <a href="#electronicsProducts">
+
+            Shop Electronics
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="electronics-products"
+         id="electronicsProducts">
+
+
+    <div class="section-heading">
+
+        <span>ELECTRONICS COLLECTION</span>
+
+        <h2>
+
+            Shop Latest
+            <strong>Electronics</strong>
+
+        </h2>
+
+        <p>
+
+            Explore our collection of smart gadgets
+            and everyday technology.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= FILTER ================= -->
+
+    <div class="category-filter">
+
+
+         <button class="filter-btn active" data-category="all">
+            All
+        </button>
+
+        
+         <button class="filter-btn active" data-category="mobile">
+            Mobiles
+        </button>
+
+        <button class="filter-btn active" data-category="laptop">
+          Laptops
+        </button>
+
+        <button class="filter-btn active" data-category="headphone">
+            Headphones
+        </button>
+
+
+        <button class="filter-btn active" data-category="watch">
+            Smartwatches
+
+        </button>
+
+        <button class="filter-btn active" data-category="speaker">
+             Speakers
+        </button>
+
+          <button class="filter-btn active" data-category="accessory">
+            Accessories
+        </button>
+
+    </div>
+
+
+
+    <!-- ================= PRODUCT GRID ================= -->
+
+    <div class="products-grid"
+         id="electronicsProductGrid">
+
+
+
+        <!-- PRODUCT 1  head phone -->
+
+        <div class="product-card"
+             data-category="mobile">
+
+            <div class="product-image">
+
+                <span class="discount">-15%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+                    <img src="/product/headphone" alt="#">
+
+                
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    headphone
+                </span>
+
+                <h3>
+                    Smart Headphone
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(245)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,999</strong>
+
+                    <del>₹1,999</del>
+
+                </div>
+
+
+                        
+ <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Smart Headphone',
+                        1,999,
+                        'headphone','/product/headphone'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2laptop  -->
+
+        <div class="product-card"
+             data-category="laptop">
+
+            <div class="product-image">
+
+                <span class="discount">-20%</span>
+
+                 <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+                    <img src="/product/headphone" alt="">
+
+                    <i class="fa-solid fa-laptop"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Laptop
+                </span>
+
+                <h3>
+                    Ultra Slim Laptop
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(187)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹49,999</strong>
+
+                    <del>₹62,999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Ultra Slim Laptop',
+                        49999,
+                        'laptop','/product/headphone'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3  headphone -->
+
+        <div class="product-card"
+             data-category="headphone">
+
+            <div class="product-image">
+
+                <span class="discount">-30%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-headphones"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Headphones
+                </span>
+
+                <h3>
+                    Wireless Bluetooth Headphones
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(320)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,499</strong>
+
+                    <del>₹2,199</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Wireless Bluetooth Headphones',
+                        1499,
+                        'headphones'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4 watch -->
+
+        <div class="product-card"
+             data-category="watch">
+
+            <div class="product-image">
+
+                <span class="discount">-25%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-watch-smart"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Smartwatch
+                </span>
+
+                <h3>
+                    Smart Fitness Watch
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(156)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹2,499</strong>
+
+                    <del>₹3,299</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Smart Fitness Watch',
+                        2499,
+                        'clock'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5 speaker-->
+
+        <div class="product-card"
+             data-category="speaker">
+
+            <div class="product-image">
+
+                <span class="discount">-18%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-volume-high"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Speaker
+                </span>
+
+                <h3>
+                    Portable Bluetooth Speaker
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(214)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,799</strong>
+
+                    <del>₹2,199</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Portable Bluetooth Speaker',
+                        1799,
+                        'volume-high'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6 accessory-->
+
+        <div class="product-card"
+             data-category="accessory">
+
+            <div class="product-image">
+
+                <span class="discount">-35%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-battery-full"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Accessories
+                </span>
+
+                <h3>
+                    Fast Charging Power Bank
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(198)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹999</strong>
+
+                    <del>₹1,499</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Fast Charging Power Bank',
+                        999,
+                        'battery-full'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 7  mobile-->
+
+        <div class="product-card"
+             data-category="mobile">
+
+            <div class="product-image">
+
+                <span class="discount">-22%</span>
+
+                 <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Mobile
+                </span>
+
+                <h3>
+                    Premium 5G Smartphone
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(275)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹21,999</strong>
+
+                    <del>₹27,999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Premium 5G Smartphone',
+                        21999,
+                        'mobile-screen'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 8 accessory-->
+
+        <div class="product-card"
+             data-category="accessory">
+
+            <div class="product-image">
+
+                <span class="discount">-28%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-keyboard"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Accessories
+                </span>
+
+                <h3>
+                    Wireless Keyboard & Mouse
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(132)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,299</strong>
+
+                    <del>₹1,799</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Wireless Keyboard Mouse',
+                        1299,
+                        'keyboard'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+
+
+
+
+
+
+<script>
+
+function filterElectronicsProducts(category, button) {
+
+    const products =
+        document.querySelectorAll(
+            "#electronicsProductGrid .product-card"
+        );
+
+
+    const buttons =
+        document.querySelectorAll(
+            ".electronics-products .filter-btn"
+        );
+
+
+    buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+    });
+
+
+    button.classList.add("active");
+
+
+    products.forEach(function(product) {
+
+        const productCategory =
+            product.getAttribute("data-category");
+
+
+        if (
+            category === "all" ||
+            productCategory === category
+        ) {
+
+            product.style.display = "";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+       <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/jewellery.css">
+    <link rel="stylesheet" href="/Style.css/shop.css">>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+
+
+
+<!-- ================= JEWELLERY HERO ================= -->
+
+<section class="jewellery-hero">
+
+    <div class="jewellery-hero-content">
+
+        <span>BEAUTY • ELEGANCE • STYLE</span>
+
+        <h1>
+
+            Shine With
+            <strong>Elegance</strong>
+
+        </h1>
+
+        <p>
+
+            Discover beautiful jewellery pieces
+            designed to make every moment special.
+
+        </p>
+
+        <a href="#jewelleryProducts">
+
+            Explore Collection
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= JEWELLERY PRODUCTS ================= -->
+
+<section class="jewellery-products"
+         id="jewelleryProducts">
+
+
+    <div class="section-heading">
+
+        <span>JEWELLERY COLLECTION</span>
+
+        <h2>
+
+            Discover Your
+            <strong>Perfect Style</strong>
+
+        </h2>
+
+        <p>
+
+            Explore elegant jewellery for every
+            occasion and every style.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= FILTER ================= -->
+
+    <div class="category-filter">
+
+      
+
+
+         <button class="filter-btn active" data-category="all">
+            All
+        </button>
+
+
+
+        <button class="filter-btn active" data-category="necklace">
+            Necklace
+        </button>
+
+        
+
+
+        <button class="filter-btn active" data-category="earring">
+              Earrings
+        </button>
+
+
+         <button class="filter-btn active" data-category="ring">
+              Rings
+        </button>
+
+
+
+        <button class="filter-btn active" data-category="bracelet">
+               Bracelets
+        </button>
+
+
+
+        <button class="filter-btn active" data-category="bangle">
+                   Bangles
+        </button>
+
+        <button class="filter-btn active" data-category="set">
+              Jewellery Sets
+        </button>
+
+        
+
+    </div>
+
+
+
+    <!-- ================= PRODUCT GRID ================= -->
+
+    <div class="products-grid"
+         id="jewelleryProductGrid">
+
+
+
+        <!-- PRODUCT 1    necklace   -->
+
+        <div class="product-card"
+             data-category="necklace">
+
+            <div class="product-image">
+
+                <span class="discount">-25%</span>
+
+
+ <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+                    <img src="/product/jewellery" alt="">
+
+        
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Necklace
+                </span>
+
+                <h3>
+                    Elegant Gold Necklace
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(145)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,499</strong>
+
+                    <del>₹1,999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Elegant Gold Necklace',
+                        1499,
+                        'gem','/product/jewellery'
+                    )">
+
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 2  earring -->
+
+        <div class="product-card"
+             data-category="earring">
+
+            <div class="product-image">
+
+                <span class="discount">-30%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Earrings
+                </span>
+
+                <h3>
+                    Pearl Drop Earrings
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(98)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹699</strong>
+
+                    <del>₹999</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Pearl Drop Earrings',
+                        699,
+                        'circle'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 3 ring -->
+
+        <div class="product-card"
+             data-category="ring">
+
+            <div class="product-image">
+
+                <span class="discount">-20%</span>
+
+                 <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-ring"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Ring
+                </span>
+
+                <h3>
+                    Classic Crystal Ring
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(121)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹899</strong>
+
+                    <del>₹1,199</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Classic Crystal Ring',
+                        899,
+                        'ring'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 4  bracelet -->
+
+        <div class="product-card"
+             data-category="bracelet">
+
+            <div class="product-image">
+
+                <span class="discount">-35%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-link"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bracelet
+                </span>
+
+                <h3>
+                    Premium Charm Bracelet
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(87)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹799</strong>
+
+                    <del>₹1,199</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Premium Charm Bracelet',
+                        799,
+                        'link'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 5  bangle -->
+
+        <div class="product-card"
+             data-category="bangle">
+
+            <div class="product-image">
+
+                <span class="discount">-28%</span>
+ <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-circle-notch"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Bangles
+                </span>
+
+                <h3>
+                    Traditional Gold Bangles
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(176)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,299</strong>
+
+                    <del>₹1,799</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Traditional Gold Bangles',
+                        1299,
+                        'circle-notch'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 6   set-->
+
+        <div class="product-card"
+             data-category="set">
+
+            <div class="product-image">
+
+                <span class="discount">-40%</span>
+
+                <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Jewellery Set
+                </span>
+
+                <h3>
+                    Princess Jewellery Set
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(203)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,599</strong>
+
+                    <del>₹2,699</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Princess Jewellery Set',
+                        1599,
+                        'gem'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 7   necklace-->
+
+        <div class="product-card"
+             data-category="necklace">
+
+            <div class="product-image">
+
+                <span class="discount">-22%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Necklace
+                </span>
+
+                <h3>
+                    Pearl Layered Necklace
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(112)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹999</strong>
+
+                    <del>₹1,299</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Pearl Layered Necklace',
+                        999,
+                        'gem'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT 8   earring -->
+
+        <div class="product-card"
+             data-category="earring">
+
+            <div class="product-image">
+
+                <span class="discount">-32%</span>
+
+               <button class="wishlist" onclick="addToWishlist(this); window.location.href='wishlist.html';"> <i class="fa-regular fa-heart"></i> </button>
+
+
+                <div class="product-placeholder">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="product-info">
+
+                <span class="product-category">
+                    Earrings
+                </span>
+
+                <h3>
+                    Diamond Style Earrings
+                </h3>
+
+
+                <div class="rating">
+
+                    ★★★★★
+
+                    <span>(154)</span>
+
+                </div>
+
+
+                <div class="price">
+
+                    <strong>₹1,099</strong>
+
+                    <del>₹1,599</del>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addProductToCart(
+                        'Diamond Style Earrings',
+                        1099,
+                        'star'
+                    )">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function filterJewelleryProducts(category, button) {
+
+    // Saare jewellery products
+    const products = document.querySelectorAll(
+        "#jewelleryProductGrid .product-card"
+    );
+
+    // Saare filter buttons
+    const buttons = document.querySelectorAll(
+        ".jewellery-products .filter-btn"
+    );
+
+    // Active button remove
+    buttons.forEach(function(btn) {
+        btn.classList.remove("active");
+    });
+
+    // Clicked button active
+    if (button) {
+        button.classList.add("active");
+    }
+
+    // Products filter
+    products.forEach(function(product) {
+
+        const productCategory =
+            product.getAttribute("data-category");
+
+        if (
+            category === "all" ||
+            productCategory === category
+        ) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+
+    });
+}
+
+</script>
+
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>
+
+</body>
+</html>

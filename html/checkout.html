@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopZone - E-Commerce</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+       <link rel="stylesheet" href="/Style.css/home.css">
+    <link rel="stylesheet" href="/Style.css/checkout.css">
+    <link rel="stylesheet" href="/Style.css/shop.css">>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <p>🚚 Free Shipping on Orders Above ₹999</p>
+        <p>Call Us: +91 98765 43210</p>
+    </div>
+
+    <!-- Main Header -->
+    <div class="main-header">
+
+        <!-- Logo -->
+        <a href="#" class="logo">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Shop<span>Zone</span></span>
+        </a>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="searchInput"
+                   placeholder="Search products...">
+
+            <button onclick="searchProduct()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Header Icons -->
+        <div class="header-icons">
+
+             <a href="/index.html/account.html">
+                <i class="fa-regular fa-user"></i>
+                <span>Account</span>
+            </a>
+
+            <a href="/index.html/wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+                <span>Wishlist</span>
+            </a>
+
+            <a href="/index.html/cart.html" class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Cart</span>
+                <b id="cartCount">0</b>
+            </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <button class="menu-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+
+        <ul>
+            <li><a href="/index.html/home.html" class="active">Home</a></li>
+            <li><a href="/index.html/shop.html">Shop</a></li>
+            <li><a href="/index.html/men.html">Men</a></li>
+            <li><a href="/index.html/women.html">Women</a></li>
+            <li><a href="/index.html/Electronics.html">Electronics</a></li>
+            <li><a href="/index.html/Jewellery.html">Jewellery</a></li>
+            <li><a href="/index.html/offers.html">Offers</a></li>
+            <li><a href="/index.html/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= CHECKOUT ================= -->
+
+<main class="checkout-page">
+
+
+    <div class="checkout-heading">
+
+        <span>SHOPZONE</span>
+
+        <h1>
+            Complete Your <strong>Order</strong>
+        </h1>
+
+        <p>
+            Enter your details and choose your preferred payment method.
+        </p>
+
+    </div>
+
+
+    <div class="checkout-layout">
+
+
+        <!-- ================= LEFT ================= -->
+
+        <div class="checkout-left">
+
+
+            <!-- CUSTOMER INFORMATION -->
+
+            <section class="checkout-box">
+
+                <div class="box-heading">
+
+                    <span class="step">
+                        1
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Customer Information
+                        </h2>
+
+                        <p>
+                            Enter your contact details
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Full Name *
+                        </label>
+
+                        <input type="text"
+                               id="customerName"
+                               placeholder="Enter your full name"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Mobile Number *
+                        </label>
+
+                        <input type="tel"
+                               id="customerPhone"
+                               placeholder="Enter mobile number"
+                               maxlength="10"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Email Address *
+                        </label>
+
+                        <input type="email"
+                               id="customerEmail"
+                               placeholder="Enter your email address"
+                               required>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DELIVERY ADDRESS -->
+
+            <section class="checkout-box">
+
+                <div class="box-heading">
+
+                    <span class="step">
+                        2
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Delivery Address
+                        </h2>
+
+                        <p>
+                            Where should we deliver your order?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group full">
+
+                        <label>
+                            Address *
+                        </label>
+
+                        <textarea id="customerAddress"
+                                  rows="3"
+                                  placeholder="House No., Street, Area"
+                                  required></textarea>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            City *
+                        </label>
+
+                        <input type="text"
+                               id="customerCity"
+                               placeholder="Enter city"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            State *
+                        </label>
+
+                        <input type="text"
+                               id="customerState"
+                               placeholder="Enter state"
+                               required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            PIN Code *
+                        </label>
+
+                        <input type="text"
+                               id="customerPin"
+                               placeholder="6 digit PIN"
+                               maxlength="6"
+                               required>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- PAYMENT -->
+
+            <section class="checkout-box">
+
+                <div class="box-heading">
+
+                    <span class="step">
+                        3
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Payment Method
+                        </h2>
+
+                        <p>
+                            Choose how you want to pay
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-methods">
+
+
+                    <label class="payment-option">
+
+                        <input type="radio"
+                               name="payment"
+                               value="cod"
+                               checked>
+
+                        <div class="payment-content">
+
+                            <i class="fa-solid fa-money-bill-wave"></i>
+
+                            <div>
+
+                                <strong>
+                                    Cash on Delivery
+                                </strong>
+
+                                <small>
+                                    Pay when your order arrives
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input type="radio"
+                               name="payment"
+                               value="upi">
+
+                        <div class="payment-content">
+
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+
+                            <div>
+
+                                <strong>
+                                    UPI
+                                </strong>
+
+                                <small>
+                                    Google Pay, PhonePe, Paytm
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+
+                    </label>
+
+
+                    <label class="payment-option">
+
+                        <input type="radio"
+                               name="payment"
+                               value="card">
+
+                        <div class="payment-content">
+
+                            <i class="fa-solid fa-credit-card"></i>
+
+                            <div>
+
+                                <strong>
+                                    Credit / Debit Card
+                                </strong>
+
+                                <small>
+                                    Secure online payment
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+
+                    </label>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- ================= RIGHT ================= -->
+
+<!-- ORDER SUMMARY -->
+<div class="checkout-summary">
+    <h2>Order Summary</h2>
+
+    <div id="checkoutItems" class="checkout-items">
+        <!-- Products JavaScript se yahan aayenge -->
+    </div>
+
+    <div class="summary-line">
+        <span>Subtotal</span>
+        <strong id="checkoutSubtotal">₹0</strong>
+    </div>
+
+    <div class="summary-line">
+        <span>Shipping</span>
+        <strong id="checkoutShipping">₹0</strong>
+    </div>
+
+    <div class="summary-total">
+        <span>Total</span>
+        <strong id="checkoutTotal">₹0</strong>
+    </div>
+</div>
+
+
+
+    </div>
+
+
+</main>
+
+
+<!-- ================= SUCCESS POPUP ================= -->
+
+<div id="orderSuccess"
+     class="success-overlay">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+
+            <i class="fa-solid fa-check"></i>
+
+        </div>
+
+        <h2>
+            Order Placed Successfully!
+        </h2>
+
+        <p>
+            Thank you for shopping with ShopZone.
+        </p>
+
+        <p class="order-number"
+           id="orderNumber">
+        </p>
+
+        <button onclick="sendOrderWhatsApp()"
+                class="whatsapp-btn">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+            Send Order on WhatsApp
+
+        </button>
+
+        <a href="../Home/index.html"
+           class="home-btn">
+
+            Continue Shopping
+
+        </a>
+
+    </div>
+
+</div>
+
+
+
+
+
+<!-- PAYMENT METHOD -->
+<div class="payment-section">
+
+    <h2>Payment Method</h2>
+
+    <div class="payment-options">
+
+        <!-- CASH ON DELIVERY -->
+        <label class="payment-option">
+            <input
+                type="radio"
+                name="payment"
+                value="Cash on Delivery"
+                checked
+            >
+
+            <div class="payment-content">
+                <i class="fa-solid fa-money-bill-wave"></i>
+
+                <div>
+                    <h3>Cash on Delivery</h3>
+                    <p>Pay when your order is delivered</p>
+                </div>
+            </div>
+        </label>
+
+
+        <!-- CREDIT / DEBIT CARD -->
+        <label class="payment-option">
+            <input
+                type="radio"
+                name="payment"
+                value="Credit/Debit Card"
+            >
+
+            <div class="payment-content">
+                <i class="fa-solid fa-credit-card"></i>
+
+                <div>
+                    <h3>Credit / Debit Card</h3>
+                    <p>Pay securely using your card</p>
+                </div>
+            </div>
+        </label>
+
+
+        <!-- UPI -->
+        <label class="payment-option">
+            <input
+                type="radio"
+                name="payment"
+                value="UPI"
+            >
+
+            <div class="payment-content">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+
+                <div>
+                    <h3>UPI</h3>
+                    <p>Google Pay, PhonePe, Paytm etc.</p>
+                </div>
+            </div>
+        </label>
+
+    </div>
+
+
+    <!-- CARD DETAILS -->
+    <div id="cardDetails" class="payment-details">
+
+        <h3>Card Details</h3>
+
+        <input
+            type="text"
+            id="cardNumber"
+            placeholder="Card Number"
+            maxlength="19"
+        >
+
+        <input
+            type="text"
+            id="cardName"
+            placeholder="Name on Card"
+        >
+
+        <div class="card-row">
+
+            <input
+                type="text"
+                id="cardExpiry"
+                placeholder="MM/YY"
+                maxlength="5"
+            >
+
+            <input
+                type="password"
+                id="cardCVV"
+                placeholder="CVV"
+                maxlength="3"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- UPI DETAILS -->
+    <div id="upiDetails" class="payment-details">
+
+        <h3>UPI Payment</h3>
+
+        <input
+            type="text"
+            id="upiId"
+            placeholder="Enter UPI ID (example@upi)"
+        >
+
+    </div>
+
+</div>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    loadCheckoutItems();
+
+});
+
+
+/* ================= LOAD CART ================= */
+
+function loadCheckoutItems() {
+
+    const cart =
+        JSON.parse(localStorage.getItem("shopzoneCart")) || [];
+
+    const container =
+        document.getElementById("checkoutItems");
+
+    const subtotalElement =
+        document.getElementById("checkoutSubtotal");
+
+    const shippingElement =
+        document.getElementById("checkoutShipping");
+
+    const totalElement =
+        document.getElementById("checkoutTotal");
+
+
+    if (cart.length === 0) {
+
+        container.innerHTML = `
+            <div class="empty-checkout">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Your cart is empty.</p>
+                <a href="../shop/shop.html">
+                    Continue Shopping
+                </a>
+            </div>
+        `;
+
+        subtotalElement.textContent = "₹0";
+        shippingElement.textContent = "₹0";
+        totalElement.textContent = "₹0";
+
+        return;
+
+    }
+
+
+    let subtotal = 0;
+
+
+    container.innerHTML = "";
+
+
+    cart.forEach(function (item) {
+
+        const price =
+            Number(item.price) || 0;
+
+        const quantity =
+            Number(item.quantity) || 1;
+
+
+        subtotal += price * quantity;
+
+
+        container.innerHTML += `
+
+            <div class="checkout-item">
+
+                <div class="checkout-item-image">
+
+                    ${
+                        item.image
+                        ?
+                        `<img src="${item.image}"
+                              alt="${item.name}">`
+                        :
+                        `<i class="fa-solid fa-box"></i>`
+                    }
+
+                </div>
+
+                <div class="checkout-item-info">
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p>
+                        Qty: ${quantity}
+                    </p>
+
+                    <strong>
+                        ₹${(price * quantity).toLocaleString("en-IN")}
+                    </strong>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+
+    const shipping =
+        subtotal >= 999 ? 0 : 50;
+
+    const total =
+        subtotal + shipping;
+
+
+    subtotalElement.textContent =
+        "₹" + subtotal.toLocaleString("en-IN");
+
+    shippingElement.textContent =
+        shipping === 0
+        ? "FREE"
+        : "₹" + shipping.toLocaleString("en-IN");
+
+    totalElement.textContent =
+        "₹" + total.toLocaleString("en-IN");
+
+}
+
+
+/* ================= PLACE ORDER ================= */
+
+function placeOrder() {
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const phone =
+        document.getElementById("customerPhone").value.trim();
+
+    const email =
+        document.getElementById("customerEmail").value.trim();
+
+    const address =
+        document.getElementById("customerAddress").value.trim();
+
+    const city =
+        document.getElementById("customerCity").value.trim();
+
+    const state =
+        document.getElementById("customerState").value.trim();
+
+    const pin =
+        document.getElementById("customerPin").value.trim();
+
+
+    if (
+        !name ||
+        !phone ||
+        !email ||
+        !address ||
+        !city ||
+        !state ||
+        !pin
+    ) {
+
+        alert("Please fill all required fields.");
+
+        return;
+
+    }
+
+
+    if (!/^[0-9]{10}$/.test(phone)) {
+
+        alert("Please enter a valid 10 digit mobile number.");
+
+        return;
+
+    }
+
+
+    if (!/^[0-9]{6}$/.test(pin)) {
+
+        alert("Please enter a valid 6 digit PIN code.");
+
+        return;
+
+    }
+
+
+    const cart =
+        JSON.parse(localStorage.getItem("shopzoneCart")) || [];
+
+
+    if (cart.length === 0) {
+
+        alert("Your cart is empty.");
+
+        return;
+
+    }
+
+
+    const payment =
+        document.querySelector(
+            'input[name="payment"]:checked'
+        ).value;
+
+
+    let paymentName = "Cash on Delivery";
+
+
+    if (payment === "upi") {
+
+        paymentName = "UPI";
+
+    }
+
+    if (payment === "card") {
+
+        paymentName = "Credit / Debit Card";
+
+    }
+
+
+    const orderId =
+        "SZ" +
+        Date.now().toString().slice(-8);
+
+
+    localStorage.setItem(
+        "shopzoneLastOrder",
+        JSON.stringify({
+            orderId: orderId,
+            name: name,
+            phone: phone,
+            email: email,
+            address: address,
+            city: city,
+            state: state,
+            pin: pin,
+            payment: paymentName,
+            cart: cart
+        })
+    );
+
+
+    document.getElementById("orderNumber").textContent =
+        "Order ID: " + orderId;
+
+
+    document.getElementById("orderSuccess").style.display =
+        "flex";
+
+}
+
+
+/* ================= WHATSAPP ORDER ================= */
+
+function sendOrderWhatsApp() {
+
+    const order =
+        JSON.parse(
+            localStorage.getItem("shopzoneLastOrder")
+        );
+
+
+    if (!order) {
+
+        return;
+
+    }
+
+
+    let message =
+        "🛍️ *New ShopZone Order*%0A%0A";
+
+
+    message +=
+        "📦 *Order ID:* " +
+        order.orderId +
+        "%0A";
+
+
+    message +=
+        "👤 *Name:* " +
+        order.name +
+        "%0A";
+
+
+    message +=
+        "📱 *Phone:* " +
+        order.phone +
+        "%0A";
+
+
+    message +=
+        "📧 *Email:* " +
+        order.email +
+        "%0A";
+
+
+    message +=
+        "📍 *Address:* " +
+        order.address +
+        ", " +
+        order.city +
+        ", " +
+        order.state +
+        " - " +
+        order.pin +
+        "%0A";
+
+
+    message +=
+        "💳 *Payment:* " +
+        order.payment +
+        "%0A%0A";
+
+
+    message +=
+        "🛒 *Products:*%0A";
+
+
+    order.cart.forEach(function (item) {
+
+        message +=
+            "• " +
+            item.name +
+            " x " +
+            (item.quantity || 1) +
+            " - ₹" +
+            (
+                Number(item.price) *
+                Number(item.quantity || 1)
+            ) +
+            "%0A";
+
+    });
+
+
+    const whatsappNumber =
+        "919876543210";
+
+
+    window.open(
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message,
+        "_blank"
+    );
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// PAYMENT METHOD
+const paymentRadios = document.querySelectorAll(
+    'input[name="payment"]'
+);
+
+const cardDetails = document.getElementById("cardDetails");
+const upiDetails = document.getElementById("upiDetails");
+
+paymentRadios.forEach(function (radio) {
+
+    radio.addEventListener("change", function () {
+
+        // Hide both
+        cardDetails.style.display = "none";
+        upiDetails.style.display = "none";
+
+        // Card selected
+        if (this.value === "Credit/Debit Card") {
+            cardDetails.style.display = "block";
+        }
+
+        // UPI selected
+        if (this.value === "UPI") {
+            upiDetails.style.display = "block";
+        }
+
+    });
+
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JavaScript -->
+<script src="/Js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+
+/* =====================================================
+   SHOPZONE MEN PAGE
+===================================================== */
+
+
+/* ================= MEN HERO ================= */
+
+.men-hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 60px 7%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 23, 42, 0.95),
+            rgba(15, 23, 42, 0.65),
+            rgba(15, 23, 42, 0.20)
+        ),
+        url("https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.men-hero-content {
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.men-hero-content span {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #f97316;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.men-hero-content h1 {
+    margin: 0 0 18px;
+    font-size: 55px;
+    line-height: 1.1;
+}
+
+.men-hero-content h1 strong {
+    color: #f97316;
+}
+
+.men-hero-content p {
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.men-hero-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 25px;
+    background: #f97316;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.men-hero-content a:hover {
+    background: #ffffff;
+    color: #0f172a;
+}
+
+
+/* ================= MEN PRODUCTS ================= */
+
+.men-products {
+    padding: 80px 7%;
+    background: #f8fafc;
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.men-products .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.men-products .section-heading span {
+    color: #f97316;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.men-products .section-heading h2 {
+    margin: 10px 0;
+    color: #0f172a;
+    font-size: 38px;
+}
+
+.men-products .section-heading h2 strong {
+    color: #f97316;
+}
+
+.men-products .section-heading p {
+    color: #64748b;
+}
+
+
+/* ================= FILTER ================= */
+
+.men-products .category-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.men-products .filter-btn {
+    padding: 10px 22px;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #475569;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.men-products .filter-btn:hover,
+.men-products .filter-btn.active {
+    background: #f97316;
+    border-color: #f97316;
+    color: #ffffff;
+}
+
+
+/* ================= PRODUCT CARD ================= */
+
+.men-products .product-card {
+    transition: 0.3s;
+}
+
+.men-products .product-card:hover {
+    transform: translateY(-7px);
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .men-hero {
+        min-height: 420px;
+        background-position: center;
+    }
+
+    .men-hero-content h1 {
+        font-size: 44px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .men-hero {
+        min-height: 430px;
+        padding: 50px 5%;
+    }
+
+    .men-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .men-hero-content p {
+        font-size: 15px;
+    }
+
+    .men-products {
+        padding: 60px 5%;
+    }
+
+    .men-products .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .men-products .category-filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+    }
+
+    .men-products .filter-btn {
+        white-space: nowrap;
+    }
+
+}
